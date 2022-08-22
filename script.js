@@ -101,6 +101,7 @@ const updateScore = playerChoice => {
   } else {
     const choice = choices[playerChoice];
     if (choice.defeats.indexOf(computerChoice) > -1) {
+      confetti();
       resultText.textContent = 'You Won!';
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
